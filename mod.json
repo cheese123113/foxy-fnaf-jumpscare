@@ -1,0 +1,49 @@
+{
+	"geode": "5.7.1",
+	"gd": {
+		"win": "2.2081",
+		"mac": "2.2081",
+		"android": "2.2081"
+	},
+	"id": "yourname.foxy-jumpscare",
+	"name": "Foxy Jumpscare",
+	"version": "v1.0.0",
+	"developer": "YourName",
+	"description": "Every jump has a chance to black out the screen with a jumpscare.",
+	"tags": ["joke", "gameplay"],
+	"resources": {
+		"files": [
+			"resources/jumpscare.ogg"
+		]
+	},
+	"settings": {
+		"enabled": {
+			"type": "bool",
+			"name": "Enabled",
+			"default": true
+		},
+		"chance": {
+			"type": "int",
+			"name": "Blackout chance (%)",
+			"description": "Chance per jump that the screen goes black and the jumpscare plays.",
+			"default": 70,
+			"min": 0,
+			"max": 100,
+			"control": { "slider": true, "arrows": true }
+		},
+		"duration": {
+			"type": "float",
+			"name": "Blackout length (seconds)",
+			"default": 4.0,
+			"min": 0.5,
+			"max": 15.0,
+			"control": { "slider": true }
+		},
+		"sound-every-jump": {
+			"type": "bool",
+			"name": "Sound on every jump",
+			"description": "Off: the sound only plays when the screen goes black. On: the sound plays on every single jump.",
+			"default": false
+		}
+	}
+}
